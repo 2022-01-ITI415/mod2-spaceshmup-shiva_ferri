@@ -431,6 +431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd352eedc93fe746a935984e20863ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 96498876}
+  count: 0
   prefabEnemies:
   - {fileID: 1864666716847092, guid: a69aa768d15cba34b96a5422e50dc9b4, type: 3}
   - {fileID: 1864666716847092, guid: a69aa768d15cba34b96a5422e50dc9b4, type: 3}
@@ -476,7 +478,7 @@ MonoBehaviour:
     velocity: 0
   prefabPowerUp: {fileID: 1062273549804748, guid: 9649a9a79085a854d9990613a980f435,
     type: 3}
-  powerUpFrequency: 010000000100000002000000050000000500000004000000
+  powerUpFrequency: 010000000200000006000000
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
