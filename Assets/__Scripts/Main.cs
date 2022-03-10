@@ -25,7 +25,7 @@ public class Main : MonoBehaviour {
 
     private BoundsCheck bndCheck;
 
-    public void ShipDestroyed( Enemy e)
+    public void ShipDestroyed(Enemy e)
     {
         // Potentially generate a PowerUp
         if (Random.value <= e.powerUpDropChance)
@@ -99,7 +99,7 @@ public class Main : MonoBehaviour {
     public void Restart()
     {
         // Reload _Scene_0 to restart the game
-        SceneManager.LoadScene("_Scene_0");
+        SceneManager.LoadScene("Mess Around");
     }
     ///<summary>
     ///Static function that gets a WeaponDefinition from the WEAP_DICT static

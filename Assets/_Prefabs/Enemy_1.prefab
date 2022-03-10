@@ -264,6 +264,9 @@ MonoBehaviour:
   showingDamage: 0
   damageDoneTime: 0
   notifiedOfDestruction: 0
+  isMega: 0
+  babyMeteors: {fileID: 2259520185408455078, guid: 25c5b911eeaf77e429dc53a04e03a6cc,
+    type: 3}
   waveFrequency: 2
   waveWidth: 4
   waveRotY: 45

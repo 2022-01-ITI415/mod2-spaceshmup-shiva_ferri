@@ -22,6 +22,10 @@ public class Enemy : MonoBehaviour {
 
     protected BoundsCheck bndCheck;
 
+    //Test
+    public bool isMega = false;
+    public GameObject babyMeteors;
+
     private void Awake()
     {
         bndCheck = GetComponent<BoundsCheck>();
@@ -90,6 +94,11 @@ public class Enemy : MonoBehaviour {
                 health -= Main.GetWeaponDefinition(p.type).damageOnHit;
                 if(health <= 0)
                 {
+                    if (isMega)
+                    {
+                        Instantiate(babyMeteors, transform.position, Quaternion.identity);
+                    }
+                    
                     // Tell the Main singleton that this ship was destroyed
                     if (!notifiedOfDestruction)
                     {
