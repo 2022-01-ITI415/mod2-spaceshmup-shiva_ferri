@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Main : MonoBehaviour {
+
+    public Text scoreText;
+    public int count;
 
     static public Main S; // A singleton for Main
     static Dictionary<WeaponType, WeaponDefinition> WEAP_DICT;
@@ -21,7 +25,7 @@ public class Main : MonoBehaviour {
 
     private BoundsCheck bndCheck;
 
-    public void ShipDestroyed( Enemy e)
+    public void ShipDestroyed(Enemy e)
     {
         // Potentially generate a PowerUp
         if (Random.value <= e.powerUpDropChance)
@@ -39,6 +43,9 @@ public class Main : MonoBehaviour {
             // Set it to the position of the destroyed ship
             pu.transform.position = e.transform.position;
         }
+
+        count++;
+        scoreText.text = "Score: " + count.ToString();
     }
 
     private void Awake()
@@ -92,7 +99,7 @@ public class Main : MonoBehaviour {
     public void Restart()
     {
         // Reload _Scene_0 to restart the game
-        SceneManager.LoadScene("_Scene_0");
+        SceneManager.LoadScene("Mess Around");
     }
     ///<summary>
     ///Static function that gets a WeaponDefinition from the WEAP_DICT static

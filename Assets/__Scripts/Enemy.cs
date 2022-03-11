@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +21,10 @@ public class Enemy : MonoBehaviour {
     public bool notifiedOfDestruction = false; // Will be used later
 
     protected BoundsCheck bndCheck;
+
+    //Test
+    public bool isMega = false;
+    public GameObject babyMeteors;
 
     private void Awake()
     {
@@ -89,6 +94,11 @@ public class Enemy : MonoBehaviour {
                 health -= Main.GetWeaponDefinition(p.type).damageOnHit;
                 if(health <= 0)
                 {
+                    if (isMega)
+                    {
+                        Instantiate(babyMeteors, transform.position, Quaternion.identity);
+                    }
+                    
                     // Tell the Main singleton that this ship was destroyed
                     if (!notifiedOfDestruction)
                     {
